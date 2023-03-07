@@ -41,4 +41,8 @@ end
 function love.update(dt)
     square1:update(dt)
     square2:update(dt)
+    if square1:collides(square2) then
+        square1:move()
+        square2:move()
+    end
 end
