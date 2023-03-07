@@ -18,3 +18,9 @@ end
 function Square:render()
     love.graphics.rectangle('line', self.x, self.y, self.width, self.height)
 end
+
+function Square:move()
+    self.dy = math.random(-50, 50) * 5
+    self.dx = math.random(-50, 50) * 5
+end 
+

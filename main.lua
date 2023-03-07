@@ -28,3 +28,17 @@ function love.draw()
     square1:render()
     square2:render()
 end
+
+function love.keypressed(key)
+    if key == 'escape' then
+        love.event.quit()
+    elseif key == 'enter' or key == 'return' then
+        square1:move()
+        square2:move()
+    end
+end
+
+function love.update(dt)
+    square1:update(dt)
+    square2:update(dt)
+end
